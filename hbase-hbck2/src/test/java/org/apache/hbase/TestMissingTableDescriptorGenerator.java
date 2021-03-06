@@ -172,7 +172,8 @@ public class TestMissingTableDescriptorGenerator {
       assertTrue(descriptor.hasColumnFamily(FAMILY_B));
       assertEquals(customMaxFileSize, descriptor.getMaxFileSize());
 
-      // restart the cluster (the table descriptor cache should be reinitialized in the HBase Master)
+      // restart the cluster (the table descriptor cache should be reinitialized in the HBase
+      // Master)
       TEST_UTIL.shutdownMiniHBaseCluster();
       Thread.sleep(2000);
       TEST_UTIL.restartHBaseCluster(1);
